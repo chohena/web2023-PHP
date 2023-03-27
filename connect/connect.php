@@ -2,7 +2,7 @@
   $host = "localhost";
   $user = "root";
   $pw = "root";
-  $db = "chohena";
+  $db = "sample";
   $connect = new mysqli($host, $user, $pw, $db);
   $connect -> set_charset("utf-8");
   
