@@ -7,36 +7,7 @@
     <title>Document</title>
 
     <link href="https://webfontworld.github.io/onestore/OneMobilePop.css" rel="stylesheet">
-
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-        }
-        body {
-            padding: 20px;
-        }
-        li {
-            list-style: none;
-            margin: 4px 0;
-        }
-        a {
-            text-decoration : none;
-            color: #000;
-            font-family: 'OneMobilePop';
-        }
-        main {
-            display: flex;
-            justify-content: space-between;
-        }
-        aside {
-            width: 30%;
-            background-color: #f5f5f5;
-        }
-        section {
-            width: 70%;
-        }
-    </style>
+    <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
     <main> 
@@ -45,7 +16,19 @@
                 include "aside.php";
             ?>
         </aside>
-        <section>section3</section>
+        <section>
+            <form action="sample03-save.php" name="same" method="post">
+                <fieldset>
+                    <input type="text" name="memberID" placeholder="변경할 ID">
+                    <input type="email" name="youEmail" placeholder="변경할 이메일">
+                    <input type="text" name="youName" placeholder="변경할 이름">
+                    <input type="password" name="youPass" placeholder="변경할 비밀번호">
+                    <input type="text" name="youBirth" placeholder="변경할 생일">
+                    <input type="text" name="youAge" placeholder="변경할 나이">
+                    <button type="submit">회원 추가하기</button>
+                </fieldset>
+            </form>
+        </secton>
     </main>
 </body>
 </html>
