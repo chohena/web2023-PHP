@@ -4,23 +4,51 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>회원가입 페이지</title>
-    
-    <?php include "../include/head.php" ?>
+    <title>PHP 블로그 만들기</title>
+
+    <!-- CSS -->
+    <!-- <link rel="stylesheet" href="../html/assets/css/style.css"> -->
+    <link rel="stylesheet" type="text/css" href="../html/assets/css/style.css">
+    <link href="https://webfontworld.github.io/NanumSquare/NanumSquare.css" rel="stylesheet">
+
+    <!-- SCRIPT -->
+    <script defer src="./assets/js/common.js"></script>
 </head>
 <body class="gray">
+    <div id="skip">
+        <a href="#header">헤더 영역 바로가기</a>
+        <a href="#main">컨텐츠 영역 바로가기</a>
+        <a href="#footer">푸터 영역 바로가기</a>
+    </div>
 
-    <?php include "../include/skip.php" ?>
-    <!-- //skip -->
-
-    <?php include "../include/header.php" ?>
+    <header id="header">
+        <div class="header__inner container">
+            <div class="left">
+                <a href="../index.html" class="star"><span class="blind">메인으로</span></a> 
+            </div>
+            <h1 class="logo">Web Developer Blog</h1>
+            <div class="right">
+                <ul>
+                    <li><a href="join.html">회원가입</a></li>
+                </ul>
+            </div>
+        </div>
+        <nav class="nav__inner">
+            <ul>
+                <li><a href="#">회원가입</a></li>
+                <li><a href="#">로그인</a></li>
+                <li><a href="#">게시판</a></li>
+                <li><a href="#">블로그</a></li>
+            </ul>
+        </nav>
+    </header> 
     <!-- //header -->
 
     <main id="main">
         <div class="intro__inner center container bmStyle">
             <picture class="intro__images">
-                <source srcset="../assets/img/join01.png, ../assets/img/join01@2x.png, ../assets/img/join01@3x.png"> 
-                <img src="../assets/img/join01@2x.png" alt="회원가입 이미지">
+                <source srcset="assets/img/join01.png, assets/img/join01@2x.png, assets/img/join01@3x.png"> 
+                <img src="assets/img/join01@2x.png" alt="회원가입 이미지">
             </picture>
             <p class="intro__text">
                 U WANNA JOIN US?
@@ -31,7 +59,7 @@
         <div class="join__inner container">
             <h2>회원가입</h2>
             <div class="join__form">
-                <form action="joinSave.php" name="join" method="post">
+                <form action="#" name="#" method="post">
                     <fieldset>
                         <legend class="blind">회원가입 영역</legend>
                         <div>
@@ -47,7 +75,7 @@
                             <input type="password" id="youPass" name="youPass" placeholder="비밀번호를 적어주세요!" required>
                         </div>
                         <div>
-                            <label for="youPassC" class="required">비밀번호 확인</label>
+                            <label for="youPass" class="required">비밀번호 확인</label>
                             <input type="password" id="youPassC" name="youPassC" placeholder="다시 한번 비밀번호를 적어주세요!" required>
                         </div>
                         <div>
@@ -61,5 +89,10 @@
         </div>
     </main>
     <!-- //main -->
+
+    <footer id="footer">
+        <div class="footer__inner"></div>
+    </footer>
+    <!-- //footer -->
 </body>
 </html>
