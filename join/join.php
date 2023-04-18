@@ -51,8 +51,8 @@
                             <input type="password" id="youPassC" name="youPassC" placeholder="다시 한번 비밀번호를 적어주세요!" required>
                         </div>
                         <div>
-                            <label for="youPhone">연락처</label>
-                            <input type="text" id="youPhone" name="youPhone" placeholder="연락처를 적어주세요!">
+                            <label for="youPhone" class="required">연락처</label>
+                            <input type="text" id="youPhone" name="youPhone" placeholder="연락처를 적어주세요!" required>
                         </div>
                         <button type="submit">회원가입 완료</button>
                     </fieldset>
