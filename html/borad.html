@@ -1,1 +1,322 @@
 
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>게시판</title>
+
+    <!-- CSS -->
+    <!-- <link rel="stylesheet" href="../html/assets/css/style.css"> -->
+    <link rel="stylesheet" type="text/css" href="../html/assets/css/style.css">
+    <link href="https://webfontworld.github.io/NanumSquare/NanumSquare.css" rel="stylesheet">
+
+    <!-- SCRIPT -->
+    <script defer src="./assets/js/common.js"></script>
+    <style>
+        table {
+        border: 1px solid black;
+        border-collapse: collapse;
+        width: 100%;
+        }
+
+        th, td {
+        border: 1px solid black;
+        padding: 8px;
+        text-align: center;
+        }
+
+        th {
+        background-color: #ddd;
+        }
+
+        td {
+        text-align: center;
+        }
+
+        td:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        td:nth-child(1) {
+            width: 30px;
+        }
+
+        td:nth-child(2) {
+            width: 300px;
+        }
+
+        td:nth-child(3) {
+            width: 20px;
+        }
+
+        td:nth-child(4) {
+            width: 30px;
+        }
+
+        td:nth-child(5) {
+            width: 30px;
+        }
+
+        td {
+            width: 100px;
+        }
+        .intro__text {
+            font-size: 14px;
+        }
+        #pagination {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #pagination button {
+            margin: 5px;
+            padding: 10px;
+            text-align: center;
+            border: none;
+            background-color: #ddd;
+            color: black;
+        }
+
+        #pagination button:hover {
+            background-color: #bbb;
+            color: white;
+            cursor: pointer;
+        }
+
+        #pagination button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        #pagination .small-page {
+            display: inline-block;
+        }
+
+        #first-page {
+            width: 80px;
+        }
+
+        #prev-page {
+            width: 120px;
+        }
+
+        .small-page button {
+            width: 50px;
+        }
+
+        #next-page {
+            width: 120px;
+        }
+
+        #last-page {
+            width: 80px;
+        }
+        #footer {
+            height: 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .footer__inner {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .footer_inner1 {
+            margin-right: auto;
+            font-size: 14px;
+        }
+
+        .footer_inner2 {
+            margin-left: 1300px;
+            font-size: 14px;
+        }
+        .post-divider {
+            margin: 120px 0;
+        }
+
+        .thick-line {
+            border-top: 3px solid #000;
+            width: 100%;
+        }
+
+        .thin-line {
+            border-top: 1px solid #ccc;
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="gray">
+    <div id="skip">
+        <a href="#header">헤더 영역 바로가기</a>
+        <a href="#main">컨텐츠 영역 바로가기</a>
+        <a href="#footer">푸터 영역 바로가기</a>
+    </div>
+
+    <header id="header">
+        <div class="header__inner container">
+            <div class="left">
+                <a href="../index.html" class="star"><span class="blind">메인으로</span></a> 
+            </div>
+            <h1 class="logo"><a href="main/html">Hena's Blog</a></h1>
+            <div class="right">
+                <ul>
+                    <li><a href="join.html">로그인</a></li>
+                </ul>
+            </div>
+        </div>
+        <nav class="nav__inner">
+            <ul>
+                <li><a href="#">1일 1코딩</a></li>
+                <li><a href="#">로그인</a></li>
+                <li><a href="#">공지사항</a></li>
+                <li class="active"><a href="#">게시판</a></li>
+            </ul>
+        </nav>
+    </header> 
+    <!-- //header -->
+
+    <main id="main">
+        <div class="intro__inner center container bmStyle">
+            <picture class="intro__images">
+                <source srcset="assets/img/board01.png"> 
+                <img src="assets/img/board01.png" alt="게시판 이미지">
+            </picture>
+            <h1>게시판</h1>
+            <p class="intro__text">
+                개인 공간에 오신 여러분을 환영합니다. <br>
+                저와 함께 상상을 현실로 만들어 볼까요!
+            </p>
+        </div>
+        <!-- intro inner -->
+
+        <div class="join__inner container">
+            <h2 class="blind">게시판</h2>
+            <table id="table-body">
+                <thead>
+                    <tr>
+                        <th class="first-class">번호</th>
+                        <th>제목</th>
+                        <th>등록자</th>
+                        <th>등록일</th>
+                        <th>조회수</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>게시판 제목 영역입니다. 아직 제목이 없어요!</td>
+                        <td>조한미</td>
+                        <td>2023-04-20</td>
+                        <td>108</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>게시판 제목 영역입니다. 아직 제목이 없어요!</td>
+                        <td>조한미</td>
+                        <td>2023-04-20</td>
+                        <td>99</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>게시판 제목 영역입니다. 아직 제목이 없어요!</td>
+                        <td>조한미</td>
+                        <td>2023-04-20</td>
+                        <td>98</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>게시판 제목 영역입니다. 아직 제목이 없어요!</td>
+                        <td>조한미</td>
+                        <td>2023-04-20</td>
+                        <td>130</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>게시판 제목 영역입니다. 아직 제목이 없어요!</td>
+                        <td>조한미</td>
+                        <td>2023-04-20</td>
+                        <td>225</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>게시판 제목 영역입니다. 아직 제목이 없어요!</td>
+                        <td>조한미</td>
+                        <td>2023-04-20</td>
+                        <td>250</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>게시판 제목 영역입니다. 아직 제목이 없어요!</td>
+                        <td>조한미</td>
+                        <td>2023-04-20</td>
+                        <td>280</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>게시판 제목 영역입니다. 아직 제목이 없어요!</td>
+                        <td>조한미</td>
+                        <td>2023-04-20</td>
+                        <td>320</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>게시판 제목 영역입니다. 아직 제목이 없어요!</td>
+                        <td>조한미</td>
+                        <td>2023-04-20</td>
+                        <td>330</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>게시판 제목 영역입니다. 아직 제목이 없어요!</td>
+                        <td>조한미</td>
+                        <td>2023-04-20</td>
+                        <td>300</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div id="pagination">
+                <button id="first-page" disabled>처음으로</button>
+                <button id="prev-page" disabled>이전 페이지</button>
+                <div class="small-page">
+                    <button id="page-1" disabled>1</button>
+                    <button id="page-2" disabled>2</button>
+                    <button id="page-3" disabled>3</button>
+                    <button id="page-4" disabled>4</button>
+                    <button id="page-5" disabled>5</button>
+                    <button id="page-6" disabled>6</button>
+                    <button id="page-7" disabled>7</button>
+                    <button id="page-8" disabled>8</button>
+                    <button id="dot-page" disabled>...</button>
+                </div>
+                <button id="next-page" disabled>다음 페이지</button>
+                <button id="last-page" disabled>마지막으로</button>
+                <!-- <p>Page <span id="current-page">1</span> of <span id="total-pages">8</span></p> -->
+            </div>
+            <div class="post-divider">
+                <hr class="thick-line">
+                <hr class="thin-line">
+              </div>
+        </div>
+    </main>
+    <!-- //main -->
+
+    <footer id="footer">
+        <div class="footer__inner" style="display: flex;">
+          <span class="footer_inner1">
+            Copytight 2023 Henamis
+          </span>
+          <span class="footer_inner2">
+            blog by hena's
+          </span>
+        </div>
+      </footer>
+    <!-- //footer -->
+</body>
+</html>
